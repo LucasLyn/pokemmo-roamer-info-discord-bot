@@ -10,26 +10,27 @@ Simply select the desired server in the dropdown menu and press continue.
 
 ### Setting up a local copy
 1. Make an application on the [Discord developer portal](https://discord.com/developers/applications) and generate a token.
-2. Create a `token.env` file, and the following line to it
+2. Create a `token.env` file, and add the following line to it
 
 ```
 BOT_TOKEN=TOKEN
 ```
 
 Where `TOKEN` is the token you generated in step 1.
+
 3. Install the requirements by running
 
-`$ pip install -r requirements.txt`
+    $ pip install -r requirements.txt
 
 ## Usage
 ### Discord
 Run `/roamers` with or without any additional arguments:
 
-`$ /roamers`
+    $ /roamers
 
 Or with any of the optional arguments (can be combined):
 
-`$ /roamers [OPT] [VAL]`
+    $ /roamers [OPT] [VAL]
 
 Where
 
@@ -42,4 +43,4 @@ show_next_roamers   True/False  Whether to also print the next month of roamers.
 ### Running the bot
 Run the bot with `pri-bot.py`:
 
-`$ py pri-bot.py`
+    $ py pri-bot.py
