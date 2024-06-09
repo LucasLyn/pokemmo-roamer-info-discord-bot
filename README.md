@@ -4,7 +4,7 @@ The commandline version used as a submodule can be found [here](https://github.c
 
 ## Installation
 ### Adding bot to a server
-Click [this link](https://discord.com/oauth2/authorize?client_id=1249020828985594026&permissions=2048&integration_type=0&scope=bot) to add the bot to a server.
+Click [this link](https://discord.com/oauth2/authorize?client_id=1249020828985594026) to add the bot to a server.
 
 Simply select the desired server in the dropdown menu and press continue.
 
