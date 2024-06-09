@@ -20,7 +20,10 @@ Where `TOKEN` is the token you generated in step 1.
 
 3. Install the requirements by running
 
-    $ pip install -r requirements.txt
+
+```
+$ pip install -r requirements.txt
+```
 
 ## Usage
 ### Discord
@@ -44,3 +47,6 @@ show_next_roamers   True/False  Whether to also print the next month of roamers.
 Run the bot with `pri-bot.py`:
 
     $ py pri-bot.py
+
+## Media
+![Using the roamers command with both the month and next roamers arguments](https://i.imgur.com/hSnqGDr.gif)
