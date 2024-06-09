@@ -21,17 +21,19 @@ all_roamers = getattr(pri_module, "all_roamers")
 
 
 
-# Load the discord bot token
+# Load the discord bot token and init bot
 load_dotenv("token.env")
 TOKEN = os.getenv('BOT_TOKEN')
 
 bot = commands.Bot()
 
-@bot.event
+
+@bot.event # Report successful login in console
 async def on_ready():
     print(f'Successfully logged in as {bot.user.name} ({bot.user.id})')
 
 
+# 
 @bot.slash_command(name="roamers",
                    description="Get the currently active roamers in each region")
 async def roamers(ctx,
@@ -46,16 +48,18 @@ async def roamers(ctx,
     next_month = month+1 if month < 12 else 1
     next_month_name = month_names[next_month]
 
-    # Roamers current month string
+    # Set roamers in current month string
     curr_roamers = get_avail_roamers_in_month(all_roamers, month)
     curr_roamers_str = get_avail_roamers_str(curr_roamers, prefix_str=f"Currently available roamers ({month_name})")
 
-    # Roamers next month string
+    # Set roamers in next month string
     next_roamers_str = '' # init empty to void problems with .join()
     if show_next_roamers:
         next_roamers = get_avail_roamers_in_month(all_roamers, next_month)
         next_roamers_str = get_avail_roamers_str(next_roamers, prefix_str=f"Next available roamers ({next_month_name})")
     
+    
+    # Send the message
     await ctx.send(''.join([curr_roamers_str, next_roamers_str]))
 
 
